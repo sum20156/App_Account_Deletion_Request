@@ -1,16 +1,35 @@
-# account_deletion
+# App Account Deletion Request Webpage
 
-Request for account deletion
+A simple Webpage made with flutter. It allows user to sign in using firebase auth and Request to delete their Account.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+https://github.com/Adaptavant/Android-Container-V2/assets/35376901/3911d3f9-4fdd-444a-9140-5f3b50fded51
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup guide
+
+## Firebase configuration
+  Install firebase[ CLI](https://firebase.google.com/docs/cli#setup_update_cli)
+  Run the following commands
+```
+  firebase login
+  dart pub global activate flutterfire_cli
+  flutterfire configure
+```
+
+## Hosting configuration
+```
+flutter build web
+firebase experiments:enable webframeworks
+firebase init hosting
+firebase deploy
+```
+
+## Code Guide
+
+- Majority of code present in the[ main.dart file.](https://github.com/sum20156/App_Account_Deletion_Request/blob/b4e9d0ba8ce5af2ab7c805291e055504c79cf3a5/lib/main.dart). If you want to change any text you can search for those in this file and replace it.
+-` deleteUserData(String userId)` contains logics related to the data deletion, you have to modify the code according to your need. In my case user data is stored in **USERS** collection. Don't worry the syntax is very similar to java/kotlin.
+- Replace[ app_icon.png](https://github.com/sum20156/App_Account_Deletion_Request/blob/master/assets/app_icon.png) and [favicon.png](https://github.com/sum20156/App_Account_Deletion_Request/blob/master/web/favicon.png) with your app logo.
+    
+    
